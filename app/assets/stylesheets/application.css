@@ -1,0 +1,130 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+header {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  float: left;
+  color: #09c;
+  margin: 0;
+}
+
+header input {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+/* Albums */
+.albums {
+  float: left;
+  width: 70%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.albums > li {
+  float: left;
+  width: 200px;
+  margin: 10px;
+}
+
+.albums > li > a {
+  position: relative;
+  display: block;
+  background: black;
+  margin-bottom: 5px;
+}
+
+.albums img {
+  vertical-align: middle;
+}
+
+.albums > li > a:hover img {
+  opacity: 0.3;
+}
+
+.albums > li > a:hover:after {
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  content: "+";
+  color: white;
+  text-align: center;
+  font-size: 32px;
+  line-height: 36px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 100%;
+  z-index: 1;
+}
+
+.metadata {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #999;
+}
+
+.metadata li {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.metadata .name {
+  color: #666;
+  font-weight: bold;
+}
+
+/* Playlist */
+.playlist {
+  float: left;
+  width: 30%;
+}
+
+.playlist p {
+  color: #999;
+  font-size: 11px;
+}
+
+.playlist h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.playlist ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.playlist li {
+  padding: 5px 0;
+  border-bottom: 1px dotted #ccc;
+}

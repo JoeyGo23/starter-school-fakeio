@@ -1,0 +1,27 @@
+<ol class="albums">
+  <li ng-repeat="album in albums| filter:search">
+    <a href="#" ng-click="addToPlaylist($index)">
+      <img ng-src="{{ album.icon }}">
+    </a>
+    <ul class="metadata">
+      <li class="name">{{ album.name }}</li>
+      <li>{{ album.artist }}</li>
+      <li>{{ album.length }} songs</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="playlist">
+  <h2>Your Playlist</h2>
+  <p>There are {{ playlist.length }} albums in your playlist.</p>
+  <ol>
+    <li ng-repeat="album in playlist">
+      {{ album }}
+    </li>
+  </ol>
+</div>
+
+<script type="text/javascript">
+  var ALBUMS = <%= @albums.to_json.html_safe %>;
+  var PLAYLIST = <%= @playlist.to_json.html_safe %>;
+</script>

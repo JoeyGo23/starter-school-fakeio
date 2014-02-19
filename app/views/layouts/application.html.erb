@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="fakeio">
+<head>
+  <title>Fakeio</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <%= stylesheet_link_tag "application", media: "all" %>
+  <%= csrf_meta_tags %>
+</head>
+<body ng-controller="PlaylistCtrl">
+  <header>
+    <h1>fakeio</h1>
+    <input type="text" placeholder="Search albums" ng-model="search">
+    <br class="clear">
+  </header>
+  <%= yield %>
+  <%= javascript_include_tag "application" %>
+</body>
+</html>
